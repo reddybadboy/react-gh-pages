@@ -6,6 +6,6 @@ RUN mkdir nginx
 RUN cd /nginx
 RUN mkdir html
 RUN cd -- 
-RUN build /usr/share/nginx/html
+COPY build /usr/share/nginx/html
 EXPOSE 80
 ENTRYPOINT ["nginx","-g","daemon off;"]
