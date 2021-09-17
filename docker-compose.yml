@@ -1,0 +1,16 @@
+version: "3"
+services:
+  container1:
+    image: nginx:latest
+    ports:
+- "8090:80"
+    networks:
+- rail
+  container2:
+    image: tomcat:latest
+    ports:
+- "8080:8080"
+    networks:
+- rail
+networks:
+  rail:
